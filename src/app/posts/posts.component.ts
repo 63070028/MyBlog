@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogsService } from '../services/blogs.service';
 
 @Component({
   selector: 'app-posts',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class PostsComponent {
   page:number = 1;
+  blogs:number[] = [];
+
+  constructor(private blogsServices: BlogsService){}
+
+  getBlogs(){
+    this.blogs = this.blogsServices.getBlogs();
+  }
+
+  ngOnInit(): void {
+    this.getBlogs();
+  }
+  
 }

@@ -1,22 +1,21 @@
 <div class="container px-0 my-5">
-  <p class="fs-5">RECNET POSTS</p>
+  <p class="fs-5 text-uppercase">recnet posts</p>
   <div class="border-top"></div>
   <div class="d-flex my-3">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success" type="submit">Search</button>
   </div>
-  <div class="d-flex justify-content-between w-100 my-4 flex-wrap" style="height: 500px;">
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
-    <div class="bg-dark h-50 my-2" style="width: 24%;"></div>
+  <div class="d-flex my-4 flex-wrap text-light" style="height: 500px; column-gap: 1%;">
+    <div class="bg-dark my-2 d-flex flex-column justify-content-end align-items-start ps-2" style="width: 24%; height: 240px;" *ngFor="let blog of blogs | slice: (page-1) * 8 : page * 8">
+      <p class="fs-4">Title</p>
+      <div class="d-flex" style="column-gap: 10px;">
+        <p class="text-uppercase fw-lighter">author</p>
+        <p class="text-uppercase fw-lighter">date</p>
+      </div>
+    </div>
   </div>
     
-  <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination" class="d-flex justify-content-end mt-5"></ngb-pagination>
+  <ngb-pagination [collectionSize]="blogs.length" [pageSize]="8" [(page)]="page" aria-label="Default pagination" class="d-flex justify-content-end mt-4"></ngb-pagination>
 
     
 </div>

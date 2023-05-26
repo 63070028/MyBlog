@@ -1,12 +1,21 @@
-<div class="container my-4 text-center">
-    <div class="row" style="height: 500px; column-gap: 10px">
-      <div class="col-8 bg-dark text-light h-100">Profile</div>
-      <div class="col text-light">
-        <div class="h-100 d-grid" style="row-gap: 20px;">
-            <div class="bg-secondary text-light">Works</div>
-            <div class="bg-secondary text-light">Other</div>
-        </div>
+<div class="container my-4">
+  <p class="fs-5 text-uppercase">profile</p>
+  <div class="row" style="height: 500px; column-gap: 10px">
+    <div class="col-8 bg-dark text-light h-100 d-flex flex-column justify-content-end align-items-start">
+      <p class="fs-2 text-uppercase">{{user.firstname}} {{user.lastname}}</p>
+      <div class="d-flex" style="column-gap: 10px;">
+        <p class="text-uppercase fw-lighter">{{user.university.faculty}} {{user.university.name}}</p>
+        <p class="text-uppercase fw-lighter">{{user.university.major}}</p>
       </div>
+      <p class="fw-lighter">{{user.email}}</p>
     </div>
+    <div class="col h-100 text-light d-flex flex-column"  style="row-gap: 20px;">
+          <div class="bg-secondary h-50 d-flex flex-column justify-content-end align-items-start ps-2">
+            <p class="fs-4 text-uppercase">works</p>
+          </div>
+          <div class="bg-secondary h-50 d-flex flex-column justify-content-end align-items-start ps-2">
+            <p class="fs-4 text-uppercase">other</p>
+          </div>
+    </div>
+  </div>
 </div>
-  

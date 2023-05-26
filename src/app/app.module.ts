@@ -9,12 +9,13 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PostsComponent } from './posts/posts.component';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderNavbarComponent,
     MyProfileComponent,
-    PostsComponent
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
