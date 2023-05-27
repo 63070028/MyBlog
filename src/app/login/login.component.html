@@ -1,0 +1,18 @@
+<div class="bg-light d-flex flex-column justify-content-around w-50 position-absolute top-50 start-50 translate-middle p-5" style="height: 500px;">
+    <div>
+        <p class="fs-1 text-center">เข้าสู่ระบบ</p>
+        <div class="m-3">
+            <label  class="form-label">username</label>
+            <input  [(ngModel)]="username" required type="email" class="form-control"  placeholder="name@example.com" #usernameNgModel="ngModel" [ngClass]="{'border-danger': !usernameNgModel.valid && !usernameNgModel.pristine}">
+            <p [hidden]="usernameNgModel.valid || usernameNgModel.pristine"class="text-danger">กรุณากรอกข้อมูล</p>
+        </div>
+        <div class="m-3">
+            <label  class="form-label">password</label>
+            <input [(ngModel)]="password" required type="password" class="form-control"  placeholder="password" #passwordNgModel="ngModel" [ngClass]="{'border-danger': !passwordNgModel.valid && !passwordNgModel.pristine}">
+            <p [hidden]="passwordNgModel.valid || passwordNgModel.pristine"class="text-danger">กรุณากรอกข้อมูล</p>
+        </div>
+    </div>
+    <div class="d-grid col-6 mx-auto">
+        <button [disabled]="!usernameNgModel.valid || !passwordNgModel.valid  " type="button" class="btn btn-success btn-lg" (click)="onSubmit()">Sign In</button>
+    </div>
+</div>

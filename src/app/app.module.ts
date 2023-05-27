@@ -8,6 +8,10 @@ import { HeaderNavbarComponent } from './header-navbar/header-navbar.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PostsComponent } from './posts/posts.component';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -16,11 +20,16 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderNavbarComponent,
     MyProfileComponent,
     PostsComponent,
+    LoginComponent,
+    HomeComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbPaginationModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [],
