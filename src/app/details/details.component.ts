@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent {
   id: string|undefined = '';
+  isShowComment:boolean = false;
+
   constructor(private route:ActivatedRoute){}
 
   ngOnInit() {

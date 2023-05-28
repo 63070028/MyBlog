@@ -1,1 +1,51 @@
-<p>details works! {{id}}</p>
+<!-- <p>details works! {{id}}</p> -->
+<div class="container mt-5 w-50">
+    <div>
+        <p class="fs-1">Title {{id}}</p>
+        <img src="https://cdn.discordapp.com/attachments/905751963017285634/1087376790042988554/workbench.jpg" class="img-fluid">
+        <p class="fw-lighter text-end">date</p>
+    </div>
+    <div class="mt-5">
+        <p class="fs-5 fw-light">บทความนี้เราจะพาทุกคนไปพูดคุยกับผู้ชนะในกิจกรรม TD Hackathon ที่บริษัท ทีดี ตะวันแดงตั้งใจจัดขึ้นในธีม “พลิกร้านถูกดีให้ขายดี” เพื่อเป็นพื้นที่ให้พนักงานได้นำเสนอความคิด แนวทางพัฒนาโอกาสทางธุรกิจใหม่ๆ หรือปรับปรุงกระบวนการทำงานที่ส่งผลต่อธุรกิจ ช่วยให้ร้านค้าโชห่วย “ถูกดี มีมาตรฐาน” ที่ขายดีอยู่แล้ว ขายดียิ่งขึ้นไปอีก!</p> 
+    </div>
+</div>
+<div class="container w-50 mt-5" style="height: 50px;">
+    <div class="m-2 row" style="column-gap: 10px;">
+        <div class="col-2">
+            <button class="btn btn-success">like</button>
+            <span class="ms-2">0</span>
+        </div>
+        <button class="btn btn-warning col-2" (click)="isShowComment=!isShowComment">comment</button>
+    </div>
+</div>
+<div class="container w-50 mt-5" *ngIf="isShowComment">
+    <p class="fs-3">Comment</p>
+    <div>
+        <textarea class="form-control"></textarea>
+        <div class="my-2 d-grid col-6 mx-auto">
+            <button class="btn btn-success">submit</button>
+        </div>
+    </div>
+    <div class="mt-5">
+        <div class="border p-2 mt-3">
+            <div class="d-flex justify-content-between">
+                <p>test comment</p>
+                <button class="btn btn-danger">delete</button>
+            </div>
+            <div>
+                <button class="btn btn-success">like</button>
+                <span class="ms-2">0</span>
+            </div>
+        </div>
+        <div class="border p-2 mt-3">
+            <div class="d-flex justify-content-between">
+                <p>test comment</p>
+                <button class="btn btn-danger">delete</button>
+            </div>
+            <div>
+                <button class="btn btn-success">like</button>
+                <span class="ms-2">0</span>
+            </div>
+        </div>
+    </div>
+</div>
