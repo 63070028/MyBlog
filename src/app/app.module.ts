@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './details/details.component';
+import { WriteBlogComponent } from './write-blog/write-blog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { DetailsComponent } from './details/details.component';
     LoginComponent,
     HomeComponent,
     DetailsComponent,
+    WriteBlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { DetailsComponent } from './details/details.component';
     NgbPaginationModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
